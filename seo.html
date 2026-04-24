@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<style>
+.contact{
+    background-image: url(bimge.jpg);
+    padding-top: 200px;
+    color: white;
+    height: 100%;
+
+}
+.touch{
+    
+    background-color: rgb(244, 228, 234);
+    padding-bottom: 100px;
+}
+.contact-card {
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    
+}
+.contact-card{
+    transition: transform 0.2s ease;
+}
+.contact-cards :hover{
+    transform: translateY(-5px);
+}
+.contact-form {
+    background: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+}
+#contacts{
+    transition: transform 0.2s ease;
+}
+#contacts :hover{
+    transform: translateY(-5px);
+    
+}
+.btn-custom {
+    background: linear-gradient(to right, #ff4656, #d60000);
+    color: white;
+    border-radius: 50px;
+    padding: 15px 25px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.undeline {
+    align-items: end;
+    width: 50px;
+    height: 4px;
+    background: #ff4656;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.map-box {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.whatsapps{
+    border-radius: 20px;
+}
+.whatsapps :hover{
+    border-color: red;
+    border: 10px;
+
+}
+#whatsapp{
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#slideLeft {
+  animation: slideInLeft 2s ease forwards;
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#slideRight {
+  animation: slideInRight 2s ease forwards;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand text-danger d-flex">
+                <img src="image/1000689862-removebg-preview (1).png" alt="" style="width: 150px;">
+            </div>
+           
+            <button class=" btn btn-danger d-block d-lg-none rounded-circle ms-auto me-3 d-flex align-items-center justify-content-center
+            " style="width: 40px; height: 40px;" id="nav-buttons">
+                <a href="create.html" class="text-light">
+                    <i class="bi bi-person fd-5"style="width: 40px; height: 40px; " ></i>
+                </a>
+
+            </button>
+
+            <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            
+            <span class="navbar-toggler-icon bg-dark"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav navbar-nav-dark text-start mx-auto py-4 px-md-5 " id="navbar-nav">
+                    <li class="nav-list text-center ">
+                        <a href="index.html" class="nav-link  text-decoration-none">Home</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        <a href="about.html" class="nav-link  text-decoration-none">About Us</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        
+                        <a href="index.html#portfolio" class="nav-link  text-decoration-none">Portfolio</a>
+                    </li>
+
+                    <li class="nav-list dropdown text-center">
+                        <a class="nav-link dropdown-toggle  text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">Our Services</a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item  text-decoration-none" href="web.html">
+                                Web Development
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="shoptify.html">
+                                Shopify Design
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="seo.html">
+                                SEO
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="sm.html">
+                                SM Management
+                            </a></li>
+                            
+                        </ul>
+                    </li>
+    
+                    <li class="nav-list text-center">
+                        <a href="book.html" class="nav-link  text-decoration-none">Consultation</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        <a href="contact.html" class="nav-link  text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <button class=" btn btn-danger d-none d-lg-block rounded-circle ms-auto me-3 d-flex align-items-center justify-content-center
+            " style="width: 40px; height: 40px;" id="nav-buttons">
+                <a href="create.html" class="text-light">
+                    <i class="bi bi-person fd-5"style="width: 40px; height: 40px; " ></i>
+                </a>
+
+            </button>
+            
+        </div>
+    </nav>
+
+    <section id="overlay">
+        <div class="my-5" id="firstsection">
+            <div class="container pb-3">
+                <div class="overlay col-md-5 col-lg-5 text-light pb-5">
+                    <h1 class="pt-5 " style="font-size: 50px; font-weight: bolder;">
+                        SEO <span class="text-danger">PRICING</span>
+                    </h1>
+                    <p class="py-4">
+                        Affordable Monthly SEO Packages in Nigeria.
+                    </p>
+                    <div class="d-flex">
+                        <button class="btn btn-danger text-light px-4 py-3">
+                            <a class="text-light text-decoration-none" href="contact.html">
+                                <div class="bi bi-telephone"> CONTACT US</div>
+                            </a>
+                        </button>
+                        <button class="btn btn-success mx-3 py-3 px-4">
+                            <a class=" text-light text-decoration-none" href="web.html" >
+                                <div class="bi bi-code-slash"> WEB PRICING</div>
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="text-center py-5">
+                <p class="text-danger fs-6 fw-bold">
+                    SEO PRICING PLAN
+                </p>
+                <h1 class="fs-1">
+                    SEO Pricing Packages
+                </h1>
+                <p class="pt-5 pb-3 fs-5">
+                    How much does SEO cost in Nigeria? Find out our affordable monthly SEO pricing packages.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-lg-4" >
+                        <div class="card text-start" style="background-color: rgb(255,255,255);border: 2px; border-style:solid; border-color: #d60000; border-radius: 18px; box-shadow:5px 10px 10px 20px rgb(250, 250, 250); ">
+                            <div class="card-title text-light p-5 rounded-top-4" style="background-color: black;">
+                                <h3>
+                                    STARTER
+                                </h3>
+                                <h1>
+                                    <svg fill="#fffafa" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 84.99 84.99" xml:space="preserve" stroke="#fffafa" stroke-width="0.00084992"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M63.611,77.556c-1.207,0-2.303-0.176-3.256-0.52c-0.947-0.338-1.854-0.892-2.691-1.641 c-0.842-0.751-1.645-1.65-2.377-2.674c-0.746-1.044-1.492-2.107-2.213-3.16l-9.885-15.154H26.451v15.539 c0,2.52-0.584,4.438-1.734,5.709c-1.162,1.278-2.611,1.899-4.428,1.899c-1.881,0-3.342-0.628-4.469-1.919 c-1.125-1.283-1.695-3.198-1.695-5.689V54.407h-9.58C2.039,54.407,0,52.368,0,49.862s2.039-4.545,4.545-4.545h9.58v-7.757h-9.58 C2.039,37.561,0,35.522,0,33.017s2.039-4.545,4.545-4.545h9.58V17.146c0-2.189,0.238-3.909,0.707-5.11 c0.586-1.39,1.508-2.464,2.834-3.322c1.326-0.86,2.719-1.278,4.258-1.278c1.189,0,2.221,0.194,3.061,0.579 c0.863,0.394,1.594,0.906,2.236,1.565c0.654,0.669,1.33,1.547,2.012,2.606c0.701,1.09,1.424,2.225,2.191,3.437l8.492,12.849 h18.746V15.046c0-2.554,0.547-4.484,1.625-5.739c1.082-1.259,2.506-1.871,4.352-1.871c1.908,0,3.371,0.613,4.469,1.874 c1.093,1.254,1.646,3.185,1.646,5.736v13.426h9.693c2.506,0,4.545,2.039,4.545,4.545s-2.039,4.544-4.545,4.544h-9.693v7.758 h9.693c2.506,0,4.545,2.038,4.545,4.545c0,2.506-2.039,4.543-4.545,4.543h-9.693v14.467 C70.754,74.716,68.418,77.556,63.611,77.556z M24.951,51.407h19.051c0.506,0,0.979,0.256,1.256,0.68l10.312,15.809 c0.688,1.01,1.426,2.055,2.157,3.081c0.604,0.841,1.256,1.575,1.938,2.183c0.549,0.492,1.121,0.846,1.707,1.055 c0.629,0.229,1.381,0.343,2.24,0.343c1.747,0,4.143,0,4.143-5.683V52.907c0-0.828,0.673-1.5,1.5-1.5h11.193 c0.853,0,1.545-0.693,1.545-1.545s-0.692-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5 h11.193c0.852,0,1.545-0.692,1.545-1.544s-0.693-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V15.046 c0-2.25-0.494-3.29-0.91-3.767c-0.363-0.418-0.908-0.844-2.205-0.844c-0.971,0-1.572,0.239-2.076,0.826 c-0.409,0.479-0.899,1.523-0.899,3.784v14.926c0,0.828-0.672,1.5-1.5,1.5H39.109c-0.504,0-0.975-0.253-1.252-0.673l-8.951-13.545 c-0.781-1.23-1.5-2.359-2.197-3.443c-0.572-0.891-1.123-1.609-1.637-2.135c-0.379-0.391-0.814-0.694-1.334-0.932 c-0.439-0.201-1.068-0.308-1.814-0.308c-0.955,0-1.789,0.253-2.627,0.796c-0.816,0.529-1.352,1.144-1.686,1.934 c-0.172,0.44-0.486,1.602-0.486,3.981v12.825c0,0.828-0.672,1.5-1.5,1.5H4.545C3.693,31.472,3,32.165,3,33.017 s0.693,1.544,1.545,1.544h11.08c0.828,0,1.5,0.672,1.5,1.5v10.757c0,0.828-0.672,1.5-1.5,1.5H4.545 C3.693,48.317,3,49.011,3,49.862s0.693,1.545,1.545,1.545h11.08c0.828,0,1.5,0.672,1.5,1.5v17.039 c0,1.719,0.33,3.004,0.953,3.715c0.547,0.627,1.207,0.895,2.211,0.895c0.963,0,1.621-0.273,2.205-0.917 c0.625-0.688,0.957-1.966,0.957-3.69V52.907C23.451,52.079,24.123,51.407,24.951,51.407z M60.162,63.331 c-0.494,0-0.969-0.246-1.252-0.674l-5.896-8.924c-0.303-0.461-0.33-1.052-0.067-1.537c0.262-0.486,0.771-0.789,1.319-0.789h5.896 c0.828,0,1.5,0.672,1.5,1.5v8.924c0,0.662-0.436,1.246-1.068,1.437C60.451,63.31,60.305,63.331,60.162,63.331z M57.055,54.407 l1.607,2.432v-2.432H57.055z M60.162,48.317h-9.92c-0.504,0-0.975-0.253-1.252-0.673l-7.107-10.757 c-0.305-0.461-0.332-1.052-0.07-1.538c0.262-0.485,0.77-0.789,1.32-0.789h17.029c0.828,0,1.5,0.672,1.5,1.5v10.757 C61.662,47.646,60.99,48.317,60.162,48.317z M51.049,45.317h7.613v-7.757h-12.74L51.049,45.317z M40.029,48.317H24.951 c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5h8.063c0.506,0,0.979,0.256,1.256,0.681l7.016,10.757 c0.301,0.461,0.324,1.049,0.063,1.533C41.086,48.017,40.58,48.317,40.029,48.317z M26.451,45.317H37.26l-5.059-7.757h-5.75 V45.317z M29.041,31.473h-4.09c-0.828,0-1.5-0.672-1.5-1.5v-6.271c0-0.664,0.436-1.249,1.072-1.438 c0.635-0.188,1.322,0.062,1.684,0.618l4.09,6.271c0.301,0.461,0.326,1.05,0.064,1.534C30.098,31.17,29.592,31.473,29.041,31.473z "></path> </g> </g> </g> </g></svg>                    
+                                    250,000
+                                </h1>
+                            </div>
+                            <div class="card-body pb-5">
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Website SEO Audit
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Keyword Research
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> On-Page SEO (5 Pages)
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> 3 Blog Posts
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Titles, Images & Meta Tags
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Monthly Reports
+                                </p>
+                            </div>
+                            <a href="https://wa.me/2347016684261" target="_blank" class="text-light text-center fs-4 fw-bold mb-3 p-3 mx-4" style="background-color: black; border: #d60000 10px; border-radius: 15px; text-decoration: none; box-shadow: 10px 10px 20px rgb(63, 9, 9); ">
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" >
+                        <div class="card text-start" style="background-color: rgb(255,255,255);border: 2px; border-style:solid; border-color: #d60000; border-radius: 18px; box-shadow:5px 10px 10px 20px rgb(250, 250, 250); ">
+                            <div class="card-title text-light p-5 rounded-top-4" style="background-color: rgb(195,31,31);">
+                                <h3>
+                                    GROWTH <span class="p bg-warning p-1 text-dark fs-6" style="border-radius: 10px;">POPULAR</span>
+                                </h3>
+                                <h1>
+                                    <svg fill="#fffafa" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 84.99 84.99" xml:space="preserve" stroke="#fffafa" stroke-width="0.00084992"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M63.611,77.556c-1.207,0-2.303-0.176-3.256-0.52c-0.947-0.338-1.854-0.892-2.691-1.641 c-0.842-0.751-1.645-1.65-2.377-2.674c-0.746-1.044-1.492-2.107-2.213-3.16l-9.885-15.154H26.451v15.539 c0,2.52-0.584,4.438-1.734,5.709c-1.162,1.278-2.611,1.899-4.428,1.899c-1.881,0-3.342-0.628-4.469-1.919 c-1.125-1.283-1.695-3.198-1.695-5.689V54.407h-9.58C2.039,54.407,0,52.368,0,49.862s2.039-4.545,4.545-4.545h9.58v-7.757h-9.58 C2.039,37.561,0,35.522,0,33.017s2.039-4.545,4.545-4.545h9.58V17.146c0-2.189,0.238-3.909,0.707-5.11 c0.586-1.39,1.508-2.464,2.834-3.322c1.326-0.86,2.719-1.278,4.258-1.278c1.189,0,2.221,0.194,3.061,0.579 c0.863,0.394,1.594,0.906,2.236,1.565c0.654,0.669,1.33,1.547,2.012,2.606c0.701,1.09,1.424,2.225,2.191,3.437l8.492,12.849 h18.746V15.046c0-2.554,0.547-4.484,1.625-5.739c1.082-1.259,2.506-1.871,4.352-1.871c1.908,0,3.371,0.613,4.469,1.874 c1.093,1.254,1.646,3.185,1.646,5.736v13.426h9.693c2.506,0,4.545,2.039,4.545,4.545s-2.039,4.544-4.545,4.544h-9.693v7.758 h9.693c2.506,0,4.545,2.038,4.545,4.545c0,2.506-2.039,4.543-4.545,4.543h-9.693v14.467 C70.754,74.716,68.418,77.556,63.611,77.556z M24.951,51.407h19.051c0.506,0,0.979,0.256,1.256,0.68l10.312,15.809 c0.688,1.01,1.426,2.055,2.157,3.081c0.604,0.841,1.256,1.575,1.938,2.183c0.549,0.492,1.121,0.846,1.707,1.055 c0.629,0.229,1.381,0.343,2.24,0.343c1.747,0,4.143,0,4.143-5.683V52.907c0-0.828,0.673-1.5,1.5-1.5h11.193 c0.853,0,1.545-0.693,1.545-1.545s-0.692-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5 h11.193c0.852,0,1.545-0.692,1.545-1.544s-0.693-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V15.046 c0-2.25-0.494-3.29-0.91-3.767c-0.363-0.418-0.908-0.844-2.205-0.844c-0.971,0-1.572,0.239-2.076,0.826 c-0.409,0.479-0.899,1.523-0.899,3.784v14.926c0,0.828-0.672,1.5-1.5,1.5H39.109c-0.504,0-0.975-0.253-1.252-0.673l-8.951-13.545 c-0.781-1.23-1.5-2.359-2.197-3.443c-0.572-0.891-1.123-1.609-1.637-2.135c-0.379-0.391-0.814-0.694-1.334-0.932 c-0.439-0.201-1.068-0.308-1.814-0.308c-0.955,0-1.789,0.253-2.627,0.796c-0.816,0.529-1.352,1.144-1.686,1.934 c-0.172,0.44-0.486,1.602-0.486,3.981v12.825c0,0.828-0.672,1.5-1.5,1.5H4.545C3.693,31.472,3,32.165,3,33.017 s0.693,1.544,1.545,1.544h11.08c0.828,0,1.5,0.672,1.5,1.5v10.757c0,0.828-0.672,1.5-1.5,1.5H4.545 C3.693,48.317,3,49.011,3,49.862s0.693,1.545,1.545,1.545h11.08c0.828,0,1.5,0.672,1.5,1.5v17.039 c0,1.719,0.33,3.004,0.953,3.715c0.547,0.627,1.207,0.895,2.211,0.895c0.963,0,1.621-0.273,2.205-0.917 c0.625-0.688,0.957-1.966,0.957-3.69V52.907C23.451,52.079,24.123,51.407,24.951,51.407z M60.162,63.331 c-0.494,0-0.969-0.246-1.252-0.674l-5.896-8.924c-0.303-0.461-0.33-1.052-0.067-1.537c0.262-0.486,0.771-0.789,1.319-0.789h5.896 c0.828,0,1.5,0.672,1.5,1.5v8.924c0,0.662-0.436,1.246-1.068,1.437C60.451,63.31,60.305,63.331,60.162,63.331z M57.055,54.407 l1.607,2.432v-2.432H57.055z M60.162,48.317h-9.92c-0.504,0-0.975-0.253-1.252-0.673l-7.107-10.757 c-0.305-0.461-0.332-1.052-0.07-1.538c0.262-0.485,0.77-0.789,1.32-0.789h17.029c0.828,0,1.5,0.672,1.5,1.5v10.757 C61.662,47.646,60.99,48.317,60.162,48.317z M51.049,45.317h7.613v-7.757h-12.74L51.049,45.317z M40.029,48.317H24.951 c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5h8.063c0.506,0,0.979,0.256,1.256,0.681l7.016,10.757 c0.301,0.461,0.324,1.049,0.063,1.533C41.086,48.017,40.58,48.317,40.029,48.317z M26.451,45.317H37.26l-5.059-7.757h-5.75 V45.317z M29.041,31.473h-4.09c-0.828,0-1.5-0.672-1.5-1.5v-6.271c0-0.664,0.436-1.249,1.072-1.438 c0.635-0.188,1.322,0.062,1.684,0.618l4.09,6.271c0.301,0.461,0.326,1.05,0.064,1.534C30.098,31.17,29.592,31.473,29.041,31.473z "></path> </g> </g> </g> </g></svg>                    
+                                    400,000
+                                </h1>
+                            </div>
+                            <div class="card-body pb-5">
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Website SEO Audit
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Keyword Research
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> On-Page SEO (10 Pages)
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> 5 Blog Posts
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Titles, Images & Meta Tags
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> GSC & Google Analytics Setup
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Monthly Reports
+                                </p>
+                            </div>
+                            <a href="https://wa.me/2347016684261" target="_blank" class=" text-light text-center fs-4 fw-bold mb-3 p-3 mx-4" style="border: #d60000 10px; border-radius: 15px; text-decoration: none; background-color: rgb(195,31,31); box-shadow: 10px 10px 20px rgb(63, 9, 9); " >
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" >
+                        <div class="card text-start" style="background-color: rgb(255,255,255);border: 2px; border-style:solid; border-color: #d60000; border-radius: 18px; box-shadow:5px 10px 10px 20px rgb(250, 250, 250); ">
+                            <div class="card-title text-light p-5 rounded-top-4" style="background-color: black;">
+                                <h3>
+                                    CUSTOM
+                                </h3>
+                                <h1>
+                                    <svg fill="#fffafa" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 84.99 84.99" xml:space="preserve" stroke="#fffafa" stroke-width="0.00084992"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M63.611,77.556c-1.207,0-2.303-0.176-3.256-0.52c-0.947-0.338-1.854-0.892-2.691-1.641 c-0.842-0.751-1.645-1.65-2.377-2.674c-0.746-1.044-1.492-2.107-2.213-3.16l-9.885-15.154H26.451v15.539 c0,2.52-0.584,4.438-1.734,5.709c-1.162,1.278-2.611,1.899-4.428,1.899c-1.881,0-3.342-0.628-4.469-1.919 c-1.125-1.283-1.695-3.198-1.695-5.689V54.407h-9.58C2.039,54.407,0,52.368,0,49.862s2.039-4.545,4.545-4.545h9.58v-7.757h-9.58 C2.039,37.561,0,35.522,0,33.017s2.039-4.545,4.545-4.545h9.58V17.146c0-2.189,0.238-3.909,0.707-5.11 c0.586-1.39,1.508-2.464,2.834-3.322c1.326-0.86,2.719-1.278,4.258-1.278c1.189,0,2.221,0.194,3.061,0.579 c0.863,0.394,1.594,0.906,2.236,1.565c0.654,0.669,1.33,1.547,2.012,2.606c0.701,1.09,1.424,2.225,2.191,3.437l8.492,12.849 h18.746V15.046c0-2.554,0.547-4.484,1.625-5.739c1.082-1.259,2.506-1.871,4.352-1.871c1.908,0,3.371,0.613,4.469,1.874 c1.093,1.254,1.646,3.185,1.646,5.736v13.426h9.693c2.506,0,4.545,2.039,4.545,4.545s-2.039,4.544-4.545,4.544h-9.693v7.758 h9.693c2.506,0,4.545,2.038,4.545,4.545c0,2.506-2.039,4.543-4.545,4.543h-9.693v14.467 C70.754,74.716,68.418,77.556,63.611,77.556z M24.951,51.407h19.051c0.506,0,0.979,0.256,1.256,0.68l10.312,15.809 c0.688,1.01,1.426,2.055,2.157,3.081c0.604,0.841,1.256,1.575,1.938,2.183c0.549,0.492,1.121,0.846,1.707,1.055 c0.629,0.229,1.381,0.343,2.24,0.343c1.747,0,4.143,0,4.143-5.683V52.907c0-0.828,0.673-1.5,1.5-1.5h11.193 c0.853,0,1.545-0.693,1.545-1.545s-0.692-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5 h11.193c0.852,0,1.545-0.692,1.545-1.544s-0.693-1.545-1.545-1.545H69.254c-0.828,0-1.5-0.672-1.5-1.5V15.046 c0-2.25-0.494-3.29-0.91-3.767c-0.363-0.418-0.908-0.844-2.205-0.844c-0.971,0-1.572,0.239-2.076,0.826 c-0.409,0.479-0.899,1.523-0.899,3.784v14.926c0,0.828-0.672,1.5-1.5,1.5H39.109c-0.504,0-0.975-0.253-1.252-0.673l-8.951-13.545 c-0.781-1.23-1.5-2.359-2.197-3.443c-0.572-0.891-1.123-1.609-1.637-2.135c-0.379-0.391-0.814-0.694-1.334-0.932 c-0.439-0.201-1.068-0.308-1.814-0.308c-0.955,0-1.789,0.253-2.627,0.796c-0.816,0.529-1.352,1.144-1.686,1.934 c-0.172,0.44-0.486,1.602-0.486,3.981v12.825c0,0.828-0.672,1.5-1.5,1.5H4.545C3.693,31.472,3,32.165,3,33.017 s0.693,1.544,1.545,1.544h11.08c0.828,0,1.5,0.672,1.5,1.5v10.757c0,0.828-0.672,1.5-1.5,1.5H4.545 C3.693,48.317,3,49.011,3,49.862s0.693,1.545,1.545,1.545h11.08c0.828,0,1.5,0.672,1.5,1.5v17.039 c0,1.719,0.33,3.004,0.953,3.715c0.547,0.627,1.207,0.895,2.211,0.895c0.963,0,1.621-0.273,2.205-0.917 c0.625-0.688,0.957-1.966,0.957-3.69V52.907C23.451,52.079,24.123,51.407,24.951,51.407z M60.162,63.331 c-0.494,0-0.969-0.246-1.252-0.674l-5.896-8.924c-0.303-0.461-0.33-1.052-0.067-1.537c0.262-0.486,0.771-0.789,1.319-0.789h5.896 c0.828,0,1.5,0.672,1.5,1.5v8.924c0,0.662-0.436,1.246-1.068,1.437C60.451,63.31,60.305,63.331,60.162,63.331z M57.055,54.407 l1.607,2.432v-2.432H57.055z M60.162,48.317h-9.92c-0.504,0-0.975-0.253-1.252-0.673l-7.107-10.757 c-0.305-0.461-0.332-1.052-0.07-1.538c0.262-0.485,0.77-0.789,1.32-0.789h17.029c0.828,0,1.5,0.672,1.5,1.5v10.757 C61.662,47.646,60.99,48.317,60.162,48.317z M51.049,45.317h7.613v-7.757h-12.74L51.049,45.317z M40.029,48.317H24.951 c-0.828,0-1.5-0.672-1.5-1.5V36.061c0-0.828,0.672-1.5,1.5-1.5h8.063c0.506,0,0.979,0.256,1.256,0.681l7.016,10.757 c0.301,0.461,0.324,1.049,0.063,1.533C41.086,48.017,40.58,48.317,40.029,48.317z M26.451,45.317H37.26l-5.059-7.757h-5.75 V45.317z M29.041,31.473h-4.09c-0.828,0-1.5-0.672-1.5-1.5v-6.271c0-0.664,0.436-1.249,1.072-1.438 c0.635-0.188,1.322,0.062,1.684,0.618l4.09,6.271c0.301,0.461,0.326,1.05,0.064,1.534C30.098,31.17,29.592,31.473,29.041,31.473z "></path> </g> </g> </g> </g></svg>                    
+                                    XXX,XXX
+                                </h1>
+                            </div>
+                            <div class="card-body pb-5">
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Website SEO Audit
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Keyword Research
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> On-Page SEO (xx Pages)
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> xx Blog Posts
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Titles, Images & Meta Tags
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> GSC & Google Analytics Setup
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Off-Page SEO
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Backlinks Building
+                                </p>
+                                <p class="card-text ">
+                                    <i class="bi bi-check-circle text-danger pe-3"></i> Monthly Reports
+                                </p>
+                            </div>
+                            <a href="contact.html" class="text-light text-center fs-4 fw-bold mb-3 p-3 mx-4" style="background-color: black; border: #d60000 10px; border-radius: 15px; box-shadow: 10px 10px 20px rgb(63, 9, 9); text-decoration: none;" >
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-muted pt-5 fs-6">
+                    <p>
+                        <i class="bi bi-info-circle-fill pe-2 text-danger"></i>
+                        By ordering our services, you agree to our <span><a  href="#" class="text-danger" style="text-decoration: underline;">Terms of Service</a></span> and <span><a  href="#" class="text-danger" style="text-decoration: underline;">Privacy Policy.</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-danger text-light py-5 d-block d-lg-none text-center">
+        <div class="">
+            <h1 class="px-5">
+                Looking to Create a Website?
+            </h1>
+            <p class="fs-4 px-2 py-4">
+                Contact GabriCode Tech Solution - Top Web Design Company in Nigeria. We develop the best web apps!
+            </p>
+            <button class="bg-light text-danger" id="whatsapp">
+                <a class="text-danger text-decoration-none fs-5" href="https://wa.me/2347016684261">
+                    <i class="bi bi-whatsapp"></i>
+                    GET STARTED NOW
+                </a>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+
+    <section class="d-none d-lg-block">
+        <div class="border border-danger border-3 m-5" style="border-radius: 30px;">
+            <h1 class="pt-5 pb-2 px-5">
+                Looking to Create a Website?
+            </h1>
+            <div class="row g-5 px-5 pb-5 pt-3">
+                <div class="col-md-12 col-lg-8 text-lg-start">
+                    <h5 class="">
+                        Contact GabriCode Tech Solution - Top Web Design Company in Nigeria. We develop the best web apps!
+                    </h5>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="text-center">
+                        <button class="bg-danger text-light" id="whatsapp">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://wa.me/2347016684261" style="font-size: larger;">
+                                <i class="bi bi-whatsapp"></i>
+                                GET STARTED NOW
+                            </a>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="secondy">
+            <div class="row">
+                <div class="col-md-12 col-lg-3 ps-5 pt-5 text-light">
+                    <img src="image/new_logo_1-removebg-preview.png" alt="" style="width: 150px;">
+                    <p class="py-3">
+                        GabriCode Tech Solution is a web design company in Anambra Lagos & Abuja that offers website development services. We are the best web designers in Nigeria.
+                    </p>
+                    <div class="socia pb-5">
+                        <a href="#">
+                            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="44px" height="44px" viewBox="-15.91 -15.91 63.63 63.63" stroke="#ffffff" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.877,2.000 C22.519,2.000 24.382,2.652 25.426,3.738 C26.724,3.486 27.949,3.025 29.050,2.386 C28.625,3.687 27.718,4.779 26.540,5.469 C27.693,5.332 28.797,5.035 29.820,4.590 C29.054,5.707 28.087,6.690 26.971,7.477 C26.981,7.715 26.987,7.955 26.987,8.195 C26.987,15.562 21.445,24.000 10.939,24.000 C7.715,24.000 4.507,23.133 1.982,21.551 C2.428,21.605 2.883,21.631 3.343,21.631 C6.019,21.631 8.482,20.740 10.439,19.242 C7.937,19.199 5.827,17.586 5.103,15.373 C5.450,15.437 5.810,15.473 6.178,15.473 C6.696,15.473 7.203,15.406 7.681,15.277 C5.068,14.768 3.100,12.514 3.100,9.813 C3.100,9.787 3.100,9.764 3.100,9.740 C3.871,10.158 4.750,10.410 5.687,10.440 C4.154,9.437 3.147,7.734 3.147,5.799 C3.147,4.777 3.428,3.818 3.919,2.998 C6.735,6.367 10.945,8.588 15.693,8.822 C15.594,8.414 15.543,7.984 15.543,7.553 C15.543,4.473 17.721,2.000 20.877,2.000 M29.820,4.590 L29.825,4.590 M20.877,-0.000 C17.033,-0.000 14.060,2.753 13.614,6.552 C10.425,5.905 7.524,4.204 5.440,1.711 C5.061,1.257 4.503,0.998 3.919,0.998 C3.867,0.998 3.815,1.000 3.763,1.004 C3.123,1.055 2.547,1.413 2.216,1.966 C1.525,3.122 1.159,4.447 1.159,5.799 C1.159,6.700 1.321,7.579 1.625,8.400 C1.300,8.762 1.113,9.238 1.113,9.740 L1.113,9.813 C1.113,11.772 1.882,13.589 3.160,14.952 C3.087,15.294 3.103,15.655 3.215,15.998 C3.657,17.348 4.459,18.510 5.499,19.396 C4.800,19.552 4.079,19.631 3.343,19.631 C2.954,19.631 2.577,19.609 2.222,19.565 C2.141,19.556 2.061,19.551 1.981,19.551 C1.148,19.551 0.391,20.078 0.108,20.886 C-0.202,21.770 0.140,22.753 0.932,23.249 C3.764,25.023 7.318,26.000 10.939,26.000 C17.778,26.000 22.025,22.843 24.383,20.195 C27.243,16.984 28.907,12.718 28.972,8.455 C29.899,7.682 30.717,6.790 31.410,5.792 C31.661,5.458 31.810,5.041 31.810,4.590 C31.810,3.909 31.473,3.308 30.958,2.946 C31.181,2.176 30.925,1.342 30.303,0.833 C29.940,0.537 29.496,0.386 29.049,0.386 C28.708,0.386 28.365,0.474 28.056,0.654 C27.391,1.040 26.680,1.344 25.931,1.562 C24.555,0.592 22.688,-0.000 20.877,-0.000 L20.877,-0.000 Z"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#f2f2f2" width="44px" height="44px" viewBox="-79.36 -79.36 414.72 414.72" id="Flat" xmlns="http://www.w3.org/2000/svg" stroke="#f2f2f2" stroke-width="0.00256"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.56"></g><g id="SVGRepo_iconCarrier"> <path d="M224,72a44.04978,44.04978,0,0,1-44-44,12,12,0,0,0-12-12H128a12,12,0,0,0-12,12V156a16,16,0,1,1-22.85107-14.46631,12.0001,12.0001,0,0,0,6.85058-10.83886L100,89.05569a11.99969,11.99969,0,0,0-14.10352-11.814A80.00515,80.00515,0,1,0,180,156l-.00049-29.32812A107.476,107.476,0,0,0,224,136a12,12,0,0,0,12-12V84A12,12,0,0,0,224,72Zm-12,39.15381a83.22823,83.22823,0,0,1-36.99268-14.91211,12,12,0,0,0-19.00781,9.74121L156,156a56,56,0,1,1-80-50.63965l-.00049,18.64795A39.99736,39.99736,0,1,0,140,156V40h17.06006A68.19054,68.19054,0,0,0,212,94.94Z"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#ffffff" width="44px" height="44px" viewBox="-7.36 -7.36 46.72 46.72" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"></path><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"></path></g></svg>
+                        </a>
+                        <a href="#">
+                            <svg width="44px" height="44px" viewBox="-8.4 -8.4 40.80 40.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49614 7.13176C9.18664 6.9549 8.80639 6.95617 8.49807 7.13509C8.18976 7.31401 8 7.64353 8 8V16C8 16.3565 8.18976 16.686 8.49807 16.8649C8.80639 17.0438 9.18664 17.0451 9.49614 16.8682L16.4961 12.8682C16.8077 12.6902 17 12.3589 17 12C17 11.6411 16.8077 11.3098 16.4961 11.1318L9.49614 7.13176ZM13.9844 12L10 14.2768V9.72318L13.9844 12Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 8.25027 0 6.3754 0.954915 5.06107C1.26331 4.6366 1.6366 4.26331 2.06107 3.95491C3.3754 3 5.25027 3 9 3H15C18.7497 3 20.6246 3 21.9389 3.95491C22.3634 4.26331 22.7367 4.6366 23.0451 5.06107C24 6.3754 24 8.25027 24 12C24 15.7497 24 17.6246 23.0451 18.9389C22.7367 19.3634 22.3634 19.7367 21.9389 20.0451C20.6246 21 18.7497 21 15 21H9C5.25027 21 3.3754 21 2.06107 20.0451C1.6366 19.7367 1.26331 19.3634 0.954915 18.9389C0 17.6246 0 15.7497 0 12ZM9 5H15C16.9194 5 18.1983 5.00275 19.1673 5.10773C20.0989 5.20866 20.504 5.38448 20.7634 5.57295C21.018 5.75799 21.242 5.98196 21.4271 6.23664C21.6155 6.49605 21.7913 6.90113 21.8923 7.83269C21.9973 8.80167 22 10.0806 22 12C22 13.9194 21.9973 15.1983 21.8923 16.1673C21.7913 17.0989 21.6155 17.504 21.4271 17.7634C21.242 18.018 21.018 18.242 20.7634 18.4271C20.504 18.6155 20.0989 18.7913 19.1673 18.8923C18.1983 18.9973 16.9194 19 15 19H9C7.08058 19 5.80167 18.9973 4.83269 18.8923C3.90113 18.7913 3.49605 18.6155 3.23664 18.4271C2.98196 18.242 2.75799 18.018 2.57295 17.7634C2.38448 17.504 2.20866 17.0989 2.10773 16.1673C2.00275 15.1983 2 13.9194 2 12C2 10.0806 2.00275 8.80167 2.10773 7.83269C2.20866 6.90113 2.38448 6.49605 2.57295 6.23664C2.75799 5.98196 2.98196 5.75799 3.23664 5.57295C3.49605 5.38448 3.90113 5.20866 4.83269 5.10773C5.80167 5.00275 7.08058 5 9 5Z" fill="#ffffff"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#ffffff" width="44px" height="44px" viewBox="-748.8 -748.8 3417.60 3417.60" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z" fill-rule="evenodd"></path> </g></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3  text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4>Quick Links</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="about.html" class="py-4">About Us</a>
+                        </p>
+                        <p>
+                            <a href="index.html#portfolio" class="py-2">Portfolio</a>
+                        </p>
+                         
+                        <p>
+                            <a href="book.html" class="py-2">Consultation</a><br>
+                        </p>
+                        <p>
+                            <a href="contact.html" class="pt-2">Contact Us</a><br>
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3  text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4> Our Services</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="web.html" class="py-4">Web Development</a>
+                        </p>
+                        <p>
+                            <a href="shoptify.html" class="py-2">Shoptify Design</a>
+                        </p>
+                         <p>
+                            <a href="seo.html" class="py-2">SEO</a><br>
+                         </p>
+                        <p>
+                            <a href="sm.html" class="py-2">SM Management</a><br>
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3 text-light">
+                    <div class="text-start pt-5">
+                        <h4 class="text-start position-relative">Contact Info</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="tel:07016684261" target="_blank">
+                                <i class="bi bi-telephone text-danger"></i>
+                                +234 7016684261
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:oliigabriel7@gmail.com" target="_blank">
+                                <i class="bi bi-envelope text-danger"></i>
+                                oliigabriel7@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-3 px-3 text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4>Our Offices</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                        </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="-27.52 -27.52 119.04 119.04" enable-background="new 0 0 64 64" xml:space="preserve" fill="#d90d0d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#e1053c" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                            ifite Awka, Anambra State
+                        </p>
+                        <p>
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="-27.52 -27.52 119.04 119.04" enable-background="new 0 0 64 64" xml:space="preserve" fill="#d90d0d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#e1053c" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                            Ajakpani Umunya, Anambra State
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="underline bg-light w-100"></div>
+            <div class="text-light py-5 d-block d-lg-none text-center ">
+                <p class="px-5">
+                    &copy;2025 <a class="text-danger" href="#"> GabriCode Tech Solution.</a> All Rights Researved.
+                </p>
+                <p>
+                    Prevacy Policy / Terms of Service
+                </p>
+            </div>
+
+
+            <div class="row g-3 py-5 d-none d-lg-flex">
+                <div class="col-12 col-lg-9 text-light">
+                    <p class="px-5">
+                        &copy;2025 <a class="text-danger text-decoration-none" href="#"> GabriCode Tech Solution.</a> All Rights Researved.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-3 text-light">
+                    <p>
+                        Prevacy Policy / Terms of Service
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+    <div class="container">
+        <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-3a47bbbc-6405-472c-8129-a74d09415b1e" data-elfsight-app-lazy></div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</body>
+</html>

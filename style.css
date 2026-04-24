@@ -1,0 +1,436 @@
+nav{
+    border-bottom-color: rgb(182, 40, 40);
+    border-bottom-style: solid;
+    background-color: black;
+    
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+}
+#nav-buttons:hover{
+    background-color: #d80707;
+    color: #e10000;
+}
+/* .navbar-toggler :hover{
+    background-color: red;
+} */
+.btn{
+    border-radius: 40px;
+}
+.nav-list a{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 20px;
+    font-size: larger;
+    justify-items: right;
+    align-content: start;
+    
+}
+.navbar-nav .nav-link:hover{
+    color: red;
+    background-color: #0f0c0c;
+}   
+.navbar-nav .dropdown-item:hover{
+    color: red;
+}
+.navbar-nav .dropdown-menu{
+    background-color: black;
+    border: rgb(59, 56, 56);
+    border-style: solid;
+    background-color: #0f0c0c;
+    border-radius: 20px;
+}
+.navbar-nav .dropdown-menu:hover{
+    color: red;
+    
+}
+a .navlink:hover{
+    color: red;
+}   
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-width: 2px;
+}
+#firstsection{
+    background-image: url(bimge.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-origin: content-box;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    height: 100vh;
+    /* padding-top: 240px; */
+    font-size: 24px;
+}
+
+.line {
+    height: 2px;
+    background-color: red;
+    width: 40px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.underline {
+    height: 4px;
+    background-color: red;
+    width: 80px;
+    margin: 10px auto 0 auto;
+    transition: transform 0.2s ease;
+
+}
+#website:hover{
+    border-radius: 13px;
+    background-color: #f8f9fa;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    transform: translateY(-5px);
+
+    
+
+}
+.website-design {
+    border-radius: 10px;
+    padding: 20px 15px;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.2s ease;
+
+}
+.website-design:hover {
+    border-radius: 13px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    transform: translateY(-5px);
+
+}
+.website-design .design{
+    transition: transform 0.2s ease;
+    width: 90px;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+}
+.website-design .design:hover{
+    transform: translateY(-5px);
+}
+.software{
+    font-weight: 400;
+    font-size: larger;
+}
+.software:hover{
+    text-decoration: none;
+}
+.icon-box i {
+    font-size: 30px;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.vision{
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 13px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    border-top-color: rgb(182, 40, 40);
+    border-top-style: solid;
+
+    height: 100%;
+}
+.vision .design{
+    transition: transform 0.5s ease-in-out;
+    width: 90px;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+}
+.vision .design:hover{
+    transform: translatey(-10px);
+    
+}
+.text{
+    text-align: left;
+}
+
+.whatsapp_float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    border: 20px;
+    border-radius: 20px;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    margin: 5px;
+}
+.service-card:hover{
+    background-color: transparent;
+    border-radius: 20px;
+    border-radius: 13px;
+    box-shadow:4px 0 6px 4px rgba(227, 217, 217, 0.1);
+    transform: translateY(-5px);
+}
+.icon-boxs {
+    background: red;
+    color: white;
+    font-size: 3rem;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 20px;
+    width: 90px;
+    transition: transform 0.2s ease;
+    
+}
+.icon-boxs:hover{
+    transform: translateY(-5px);
+}
+.service-text h5 {
+    font-weight: bold;
+}
+
+
+.service-text a:hover {
+    text-decoration: none;
+}
+
+.bi{
+    transition: transform 0.2s ease;
+}
+.bi:hover{
+    transform: translateY(-5px);
+}
+
+.tech-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    max-width: 200px;
+    height: 100px;
+
+}
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: red;
+}
+.tech-card img {
+    max-width: 50px;
+    height: auto;
+}
+.tech-card svg {
+    max-width: 80px;
+    height: auto;
+}
+.do{
+    background-color: rgb(8, 8, 52);
+}
+.some{
+    background-color: gainsboro;
+}
+.scroll{
+    background-color: white;
+    border: 5px solid #ddd;
+    border-radius: 30px;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transition: transform 0.2s ease;
+  
+}
+.scroll:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.scroll-wrapper {
+    width: 100%;
+    height: 400px;             /* Visible area */
+    overflow: hidden;          /* Hide overflow */
+    border-radius: 20px 0 0 0;
+}
+
+.scroll-content {
+    display: block;
+    animation: scrollIframe 20s linear infinite alternate;
+      /* ↑ duration controls speed — increase for slower scroll */
+}
+
+@keyframes scrollIframe {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-300px); } /* Adjust for scroll distance */
+}
+.target{
+    padding: 200px 0;
+    color: black;
+    text-decoration: none;
+
+}
+.target:hover{
+    color: red;
+}
+
+
+.arrow{
+    color: red;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+.arrow:hover{
+    color: rgb(202, 8, 8);
+
+}
+.latest{
+    background-color: white;
+    border-radius: 30px;
+    transition: transform 0.4s ease-in;
+    border: 5px solid #ddd;
+    box-shadow: #5b1d1d;
+}
+.latest:hover{
+    transform: translateX(-10px);
+    box-shadow:0 20px 20px 10px rgb(237, 232, 232);
+}
+
+.web{
+    text-decoration: none;
+    color: rgb(34, 33, 33);
+}
+.web:hover{
+    color: red;
+}
+.view{
+    text-align: center;
+    padding:100px 20px 0 20px;
+}
+.view a{
+    background-color: rgb(136, 25, 25);
+    color: white;
+    text-decoration: none;
+    padding: 20px 50px;
+    border-radius: 20px;
+    font-weight: bolder;
+    /* transition: transform 0.4s ease-in; */
+    transition: transform 0.2s ease;
+}
+.view a:hover{
+    box-shadow:8px 6px 50px  #650202;
+    /* transform: translateX(-10px); */
+    transform: translateY(-5px);
+}
+.FREQUENTLY{
+    padding-top: 100px;
+}
+#accordiony{
+    background-color: rgb(248, 243, 243);
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
+    border-color: #b90404;
+    border-radius: 15px;
+    box-shadow:0px 5px 35px 5px #bbb8b8;
+    
+}
+#accordiony:hover{
+    color: red;
+
+}
+#accordiony-item{
+    background-color: rgb(248, 243, 243);
+    border-radius: 30px;
+    border-color: #650202;
+    border: 20px 30px;
+    padding: 10px;
+    
+}
+.look{
+    background-color: rgb(209, 19, 19);
+    color: white;
+    margin-top: 100px;
+    
+}
+.get{
+    padding: 20px;
+    margin: 25px;
+    background-color: white;
+    border-radius: 30px;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    border-color: black;
+    transition: transform 0.2s ease;
+}
+.get:hover{
+    transform: translateY(-5px);
+}
+.secondy{
+    background-color: rgb(10, 10, 51);
+    font-size: smaller;
+}
+.socia a{
+    text-decoration: none;
+}
+
+.quick  a{
+    text-decoration: none;
+    color: white;
+}
+.quick a:hover{
+    color: rgb(239, 13, 13);
+}
+.underline {
+    width: 60px;
+    height: 3px;
+    background-color: #e63946;
+    border-radius: 2px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.card{
+    transition: transform 0.5s ease-out;
+
+}
+.card:hover {
+    border-radius: 13px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    transform: translateY(-17px);
+
+}
+.card a{
+    transition: transform 0.5s ;
+    transition: ease-in-out;
+
+}
+.card a:hover {
+    border-radius: 13px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    transform: translateY(-7px);
+
+}
+.card-custom{
+    transition: transform 0.5s ease-in-out;
+    
+
+}
+.card-custom:hover {
+    border-radius: 13px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+    transform: translateY(-17px);
+
+}

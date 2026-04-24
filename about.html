@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<style>
+.about{
+    background-image: url(bimge.jpg);
+    height: 100vh;
+    padding-top: 200px;
+    color: white;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#slideLeft {
+  animation: slideInLeft 2s ease forwards;
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#slideRight {
+  animation: slideInRight 2s ease forwards;
+}
+@keyframes story {
+    0%{transform: scale(0.5);}
+    100%{transform: scale(2.5);}
+}
+
+#story{
+    animation: 0.5s ease-in-out story;
+}
+
+.aboutlinks{
+    color: red;
+}
+.aboutlinks:hover{
+    color: red;
+    text-decoration: none;
+}
+#fasts{
+    transition: transform 0.4s ease-in-out;
+
+}
+#fasts :hover{
+    transform: translateY(-7px);
+
+}
+#fast{
+    background-color: rgb(251, 251, 251);
+    padding: 30px 10px;
+    border-radius: 30px;
+    box-shadow:4px 4px 6px 4px rgb(193, 192, 192);
+}
+.section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    height: 100%;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+ }
+.mission-icon {
+    background-color: #e53935;
+}
+
+.vision-icon {
+    background-color: #1e88e5;
+}
+.handshake{
+    margin: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand text-danger d-flex">
+                <img src="image/1000689862-removebg-preview (1).png" alt="" style="width: 150px;">
+            </div>
+           
+            <button class=" btn btn-danger d-block d-lg-none rounded-circle ms-auto me-3 d-flex align-items-center justify-content-center
+            " style="width: 40px; height: 40px;" id="nav-buttons">
+                <a href="create.html" class="text-light">
+                    <i class="bi bi-person fd-5"style="width: 40px; height: 40px; " ></i>
+                </a>
+
+            </button>
+
+            <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            
+            <span class="navbar-toggler-icon bg-dark"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav navbar-nav-dark text-start mx-auto py-4 px-md-5 " id="navbar-nav">
+                    <li class="nav-list text-center ">
+                        <a href="index.html" class="nav-link  text-decoration-none">Home</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        <a href="about.html" class="nav-link text-danger text-decoration-none">About Us</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        
+                        <a href="index.html#portfolio" class="nav-link  text-decoration-none">Portfolio</a>
+                    </li>
+
+                    <li class="nav-list dropdown text-center">
+                        <a class="nav-link dropdown-toggle  text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">Our Services</a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item  text-decoration-none" href="web.html">
+                                Web Development
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="shoptify.html">
+                                Shopify Design
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="seo.html">
+                                SEO
+                            </a></li>
+                            <li><a class="dropdown-item  text-decoration-none" href="sm.html">
+                                SM Management
+                            </a></li>
+                            
+                        </ul>
+                    </li>
+    
+                    <li class="nav-list text-center">
+                        <a href="book.html" class="nav-link  text-decoration-none">Consultation</a>
+                    </li>
+                    <li class="nav-list text-center">
+                        <a href="contact.html" class="nav-link  text-decoration-none">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <button class=" btn btn-danger d-none d-lg-block rounded-circle ms-auto me-3 d-flex align-items-center justify-content-center
+            " style="width: 40px; height: 40px;" id="nav-buttons">
+                <a href="create.html" class="text-light">
+                    <i class="bi bi-person fd-5"style="width: 40px; height: 40px; " ></i>
+                </a>
+
+            </button>
+            
+        </div>
+    </nav>
+
+    <section>
+        <div class="about">
+            <div class="container" >
+                <div class="overlay col-md-6 text-light pb-5" id="slideLeft">
+                    <h1 class="pt-5 " style="font-size: 50px; font-weight: bolder;">
+                        WEB DESIGN <span class="text-danger">AGENCY</span></BR> IN NIGERIA
+                    </h1>
+                    <p class="py-4" style="font-size: x-large;">
+                        Providing Premium Website Development Services.
+                    </p>
+                    <div class="d-flex ">
+                        <button class="btn btn-danger text-light px-4 py-3">
+                            <a class="text-light text-decoration-none" href="mailto:oliigabriel7@gmail.com" target="_blank">
+                                <div class="bi bi-rocket-takeoff fs-5 "> OUR SERVICES</div>
+                            </a>
+                        </button>
+                        <button class="btn btn-success mx-3 py-3 px-4">
+                            <a class=" text-light text-decoration-none" href="contact.html">
+                                <div class="bi bi-people-fill fs-5"> GET STARTED</div>
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section >
+        <div class="container-fluid">
+            <div id="story">
+                <h4 class="text-danger text-center pt-5">
+                    OUR STORY
+                </h4>
+                <h1 class="text-center">
+                    Web Design Agency in Nigeria
+                </h1>
+            </div>
+
+            <div class="row g-4 px-3 pt-5">
+                <div class="col-lg-6">
+                    <p>
+                        GabriCode Tech Solution (RC 8598183) is a registered web design agency in Nigeria committed to empowering businesses with innovative digital solutions. With offices in Awka, Lagos and Abuja, we bring together a team of tech professionals dedicated to delivering exceptional website design and development services.
+                    </p>
+                    <p>
+                        Our expertise spans across custom web development, e-commerce design and responsive web design, ensuring your brand stands out in today's competitive online landscape. We pride ourselves on creating beautiful websites that not only capture attention but also drive engagement and conversions.
+                    </p>
+                    <p>
+                        As a leading web design agency in Nigeria, we understand that a great user experience is the cornerstone of any successful website. That's why our services go beyond just design — we offer web hosting, website maintenance, SEO, graphic design, social media management and digital marketing solutions customized to meet your business goals.
+                    </p>
+                    <p>
+                        <a class="aboutlinks" href="index.html">GabriCode Tech Solution</a> popularly known as GTS is the best web design agency in Lagos, Abuja Nigeria that creates custom website development services for businesses growth. Our reach extends far beyond Nigeria, with a growing portfolio of satisfied clients from over 18 countries worldwide.
+                    </p>
+                    <p>
+                        Beyond client services, we are passionate about building the next generation of tech talent through our online platform offering beginner to advanced <a class="aboutlinks" href="course.html">tech courses</a>  in web design, development, and digital skills. We also host impactful initiatives like the #20DayswithGTS tech workshop, which recently empowered young Nigerians with hands-on training, ₦50,000 in cash prizes, and paid internships worth ₦350,000, reinforcing our commitment to <a class="aboutlinks" href="#">tech education and youth empowerment.</a> 
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="image/agency-removebg-preview.png" class="img-fluid w-100 h-100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row g-4" id="fasts">
+                <div class="col-6 col-lg-3">
+                    <div id="fast">
+                        <h5 class="text-center">
+                            <i class="bi bi-rocket-takeoff fs-2 text-danger"></i> Fast-Loading Designs
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div id="fast">
+                        <h5 class="text-center">
+                            <i class="bi bi-tablet fs-2 text-danger"></i> Mobile-friendly
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div id="fast">
+                        <h5 class="text-center">
+                            <i class="bi bi-search fs-2 text-danger"></i> SEO Optimized
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div id="fast">
+                        <h5 class="text-center">
+                            <i class="bi bi-globe fs-2 text-danger"></i> Global Reach
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5 mt-5">
+        <div class="container py-5">
+
+            <!-- Title -->
+            <div class="section-title">
+                <h6 class="text-danger">OUR PURPOSE</h6>
+                <h2 class="fw-bold">Mission & Vision</h2>
+                <p class="text-muted">Driving digital transformation with purpose and passion.</p>
+            </div>
+
+            <!-- Cards -->
+            <div class="row g-4">
+
+                <!-- Mission -->
+                <div class="col-md-6" style="background-color: rgb(254,248,248);">
+                    <div class="card-custom">
+                        <div class="icon-circle mission-icon">
+                        <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h5 class="fw-bold">Our Mission</h5>
+                        <p class="text-muted">
+                            Our mission is to help businesses succeed by creating beautiful, functional, and user-friendly websites that truly reflect their brand. We're passionate about combining creativity and technology to deliver custom website development that not only looks great but also drives results.
+                        </p>
+                        <p class="text-muted">
+                            Whether it's helping a startup establish its online presence or enabling a big business to grow, we're here to make your digital goals a reality. We believe that every business deserves a website that works as hard as they do.                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="col-md-6 px-4" style="background-color: rgb(246,250,255);">
+                    <div class="card-custom">
+                        <div class="icon-circle vision-icon">
+                            <i class="bi bi-eye"></i>
+                        </div>
+                        <h5 class="fw-bold">Our Vision</h5>
+                        <p class="text-muted">
+                            Our vision is to become the best web design agency in Nigeria, known for helping businesses thrive in the digital age. We aim to set the bar for creativity and quality, delivering websites and digital solutions that leave a lasting impact.
+                        </p>
+                        <p class="text-muted">
+                            We see a future where businesses of all sizes can compete on a global scale with the right digital tools and strategies. By staying ahead of trends and continually improving our skills, we want to help shape that future.                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="" style="background-color: #eb0000;">
+        <div class="container">
+            <div class="text-center text-light">
+                <svg class="handshake" height="183px" width="183px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#ffffff" stroke="#ffffff" stroke-width="0.00512"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#f50000;} </style> <g> <path class="st0" d="M255.366,141.046c-7.4,3.583-14.732,8.548-21.533,15.357c-34.091,34.098-65.081,65.088-65.081,65.088 l0.013,0.02c-0.185,0.186-0.371,0.338-0.557,0.53c-8.824,8.831-9.174,22.909-1.025,32.146c0.323,0.371,0.668,0.736,1.025,1.086 c9.161,9.174,24.036,9.196,33.232,0l35.797-35.797c6.176,2.263,12.248,3.583,18.074,4.243c7.937,0.88,15.392,0.55,22.022-0.385 c16.162-2.29,14.47-1.623,23.844-4.704c9.353-3.068,19.862-9.354,19.862-9.354l6.362,6.355 c0.701,0.681,16.919,16.925,25.192,25.185c1.465,1.471,2.709,2.682,3.542,3.549c0.956,0.997,2.022,1.719,2.682,2.682l41.278,41.279 c11.898-13.35,25.488-33.232,23.81-56.058L320.763,129.14C320.763,129.14,285.062,126.589,255.366,141.046z"></path> <path class="st0" d="M261.115,394.362c-9.134-9.147-23.961-9.147-33.101,0l-6.794,6.794c9.119-9.132,9.112-23.926-0.021-33.066 c-9.14-9.126-23.947-9.126-33.087,0.007c9.14-9.133,9.14-23.94,0-33.087c-9.133-9.148-23.947-9.133-33.087,0 c9.14-9.133,9.14-23.947,0-33.095c-9.134-9.132-23.947-9.132-33.088,0.014l-20.46,20.453c-9.14,9.147-9.14,23.947,0,33.094 c9.133,9.134,23.941,9.134,33.08,0c-9.14,9.134-9.14,23.947,0,33.087c9.147,9.133,23.954,9.133,33.094,0 c-9.14,9.133-9.14,23.941,0,33.088c9.14,9.133,23.947,9.133,33.088,0l6.802-6.809c-9.119,9.147-9.113,23.94,0.02,33.081 c9.14,9.132,23.947,9.132,33.088,0l20.467-20.468C270.248,418.302,270.248,403.495,261.115,394.362z"></path> <path class="st0" d="M507.987,178.28L387.543,57.822c-5.351-5.337-14.002-5.337-19.339,0l-38.631,38.63 c-5.337,5.337-5.337,13.989,0,19.333l120.458,120.451c5.33,5.35,13.996,5.35,19.326,0l38.63-38.638 C513.338,192.276,513.338,183.624,507.987,178.28z M473.655,204.992c-5.75,5.736-15.048,5.736-20.777,0 c-5.735-5.743-5.735-15.041,0-20.777c5.729-5.736,15.027-5.736,20.777,0C479.391,189.951,479.384,199.249,473.655,204.992z"></path> <path class="st0" d="M182.417,99.864l-38.624-38.63c-5.336-5.337-13.995-5.337-19.332,0L4.003,181.691 c-5.337,5.323-5.337,13.989,0,19.319l38.631,38.644c5.33,5.331,14.002,5.331,19.325,0l120.458-120.458 C187.761,113.859,187.761,105.207,182.417,99.864z M59.118,208.403c-5.736,5.729-15.04,5.729-20.777,0 c-5.735-5.742-5.735-15.041,0-20.777c5.736-5.735,15.041-5.735,20.777,0C64.854,193.362,64.854,202.66,59.118,208.403z"></path> <path class="st0" d="M397.528,312.809l-7.468-7.482l-72.509-72.509l-4.883,2.166l-5.316,1.919l-0.384,0.117 c-0.936,0.296-9.684,2.971-26.932,5.412c-9.12,1.273-18.156,1.431-26.904,0.434c-3.459-0.385-6.898-0.95-10.296-1.692 l-27.757,27.744c-16.678,16.678-43.836,16.678-60.514,0c-0.585-0.591-1.149-1.19-1.671-1.781l-0.179-0.2 c-10.529-11.939-13.204-28.28-8.252-42.461l10.673-16.609l-0.02-0.02l65.081-65.074c2.647-2.641,5.426-5.103,8.314-7.428 c-20.281-3.982-37.296-2.806-37.296-2.806L88.093,235.679c-1.389,18.988,11.651,39.799,20.928,51.952 c16.692-15.963,43.239-15.756,59.641,0.654c6.107,6.1,9.952,13.617,11.574,21.498c7.895,1.637,15.406,5.475,21.513,11.582 c6.107,6.114,9.952,13.631,11.575,21.519c7.888,1.623,15.412,5.46,21.513,11.568c4.078,4.078,7.152,8.783,9.222,13.817 c11.1-0.137,22.242,4.016,30.688,12.455c16.65,16.636,16.643,43.733,0,60.363l-6.809,6.822l3.411,3.412 c9.148,9.147,23.954,9.147,33.095,0c9.14-9.134,9.14-23.947,0-33.088l6.808,6.83c9.147,9.133,23.947,9.133,33.087,0 c9.14-9.147,9.147-23.954,0-33.101c9.147,9.147,23.947,9.147,33.087,0c9.134-9.126,9.154-23.94,0-33.088 c9.154,9.148,23.954,9.148,33.088,0c9.147-9.132,9.147-23.947,0-33.08L397.528,312.809z"></path> </g> </g></svg>            
+                
+                <h2>
+                    Ready to Start Your Digital Journey?
+                </h2>
+                <p class="fs-5 pt-2">
+                    Let's create something amazing together. Explore our website development services and see how we can help your business grow.
+                </p>
+                <button class="btn-light my-5 py-3 px-5" style="border:beige; border-radius: 20px;" >
+                    <a class="fs-4" href="#" style="text-decoration: none; color: #f50000; ">Explore Our Services</a>
+                    <i class="bi bi-arrow-right text-danger"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="text-center py-5">
+                <p class="text-danger fs-6 fw-bold">
+                    OUR EXPERTISE
+                </p>
+                <h2>
+                    Technologies We Use
+                </h2>
+                <p class="text-muted pt-2">
+                    Cutting-edge tools and frameworks for premium website development services.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center text-center">
+                    <!-- HTML5 -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <img src="image/html5-removebg-preview.png" alt="HTML5">
+                    </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <img src="css-removebg-preview.png" alt="CSS3">
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                <img src="image/png-clipart-bootstrap-logo-landscape-tech-companies-removebg-preview.png" class="m-4" style="width: 300px;" alt="Bootstrap">
+                    </div>
+                </div>
+
+                <!-- Django -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <img src="image/images-removebg-preview (2).png" class="m-2" alt="Django">
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                           <img src="image/2486e00a47e6ee6e1e08100d026a2a5e-removebg-preview.png" class="m-2" style="width: 45px;" alt="JavaScript">
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <img src="image/images__1_-removebg-preview.png" alt="MySQL">
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                </div>
+
+                <!-- React -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <img src="image/react-removebg-preview.png" class="m-4 img-fluid" alt="React">
+                    </div>
+                </div>
+
+                <!-- Shopify -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <img src="image/shopify-removebg-preview.png" class="m-4 img-fluid" alt="Shopify">
+                    </div>
+                </div>
+
+                <!-- WooCommerce -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <svg viewBox="0 -204 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill-rule="evenodd"> <path d="M157.26652,0 L16.0962942,0 C7.16234734,0 -0.0698778538,7.30311363 0.000509457557,16.1661508 L0.000509457557,70.0533805 C0.000509457557,78.9871009 7.23325707,86.2194407 16.167204,86.2194407 L83.0296918,86.2194407 L113.589748,103.236418 L106.641048,86.2194407 L157.26652,86.2194407 C166.200694,86.2194407 173.43258,78.9871009 173.43258,70.0533805 L173.43258,16.1661508 C173.43258,7.23220389 166.200694,0 157.26652,0 Z M13.1186291,12.4791165 C11.1332925,12.6209359 9.64427866,13.329988 8.651633,14.677137 C7.65898734,15.9534216 7.30448397,17.5842096 7.51716787,19.4277267 C11.700525,46.0170195 15.6002433,63.9555965 19.2163679,73.244092 C20.6344719,76.6473062 22.2652599,78.2784566 24.1796868,78.1366372 C27.1576238,77.9236814 30.7028387,73.8113699 34.8861958,65.7992496 C37.0842164,61.2610265 40.4876571,54.4545982 45.0964273,45.3786053 C48.9250546,58.7794124 54.1719218,68.8481416 60.7663006,75.5838867 C62.6099537,77.498223 64.52429,78.3491398 66.36749,78.2073204 C67.9986404,78.0655009 69.2745626,77.2145841 70.1254794,75.6545699 C70.8345767,74.3075115 71.1182157,72.7474973 70.9763962,70.9749805 C70.5509378,64.5228743 71.1893519,55.5180177 72.9618688,43.9605919 C74.8050688,32.048708 77.0741803,23.4692644 79.8394334,18.3641713 C80.4067112,17.3006159 80.6192139,16.2370152 80.5485307,14.9607759 C80.4067112,13.3299427 79.6976139,11.9827936 78.3505555,10.9192382 C77.0034971,9.85568283 75.5141661,9.35936 73.8834688,9.50113416 C71.827313,9.64295363 70.2672988,10.6355993 69.2038794,12.6209359 C64.8079289,20.6331016 61.6879006,33.6085862 59.8447006,51.6182088 C57.1501307,44.8114634 54.8810192,36.7992524 53.1085024,27.3689827 C52.3287218,23.1856708 50.4143856,21.2003342 47.2943572,21.4130634 C45.1672918,21.5548375 43.3947296,22.9729416 41.9766256,25.667285 L26.4486171,55.2343788 C23.8960479,44.9532375 21.4852981,32.4032113 19.2872776,17.5842096 C18.7909548,13.8972205 16.7347084,12.1954775 13.1186291,12.4791165 Z M149.750994,17.5844361 C154.785359,18.6480368 158.543348,21.3423802 161.095646,25.809331 C163.364757,29.6381848 164.49886,34.246955 164.49886,39.7774612 C164.49886,47.0804389 162.65566,53.7455009 158.968354,59.843285 C154.714223,66.9338053 149.183717,70.4788389 142.306152,70.4788389 C141.100913,70.4788389 139.824538,70.3370195 138.477026,70.0533805 C133.443115,68.9899611 129.685125,66.2958442 127.132375,61.8287575 C124.863717,57.9289487 123.729161,53.2493593 123.729161,47.7895363 C123.729161,40.4865133 125.572814,33.8214966 129.259667,27.7946676 C133.584934,20.7042379 139.11544,17.159023 145.922322,17.159023 C147.127561,17.159023 148.403936,17.3008425 149.750994,17.5844361 Z M146.773239,55.9434761 C149.396672,53.6036814 151.169189,50.129331 152.161925,45.4497416 C152.445564,43.8189989 152.658067,42.0463915 152.658067,40.2028743 C152.658067,38.1466733 152.232609,35.9486527 151.381692,33.7505869 C150.318272,30.9853338 148.900078,29.4963653 147.198244,29.1418166 C144.645947,28.6454938 142.164332,30.0635979 139.824538,33.537903 C137.910201,36.2322464 136.704509,39.0684092 136.066548,41.9754818 C135.711773,43.606315 135.569954,45.3790584 135.569954,47.1515752 C135.569954,49.207731 135.995412,51.4057062 136.846329,53.6036814 C137.910201,56.3689345 139.327943,57.8578124 141.029777,58.2125876 C142.802294,58.5669097 144.71663,57.7871292 146.773239,55.9434761 Z M116.63864,25.809331 C114.08589,21.3423802 110.257217,18.6480368 105.293989,17.5844361 C103.946478,17.3008425 102.670555,17.159023 101.464863,17.159023 C94.6584351,17.159023 89.1279289,20.7042379 84.8026617,27.7946676 C81.1153555,33.8214966 79.2721555,40.4865133 79.2721555,47.7895363 C79.2721555,53.2493593 80.4067112,57.9289487 82.6753696,61.8287575 C85.2281201,66.2958442 88.9861095,68.9899611 94.020021,70.0533805 C95.3670794,70.3370195 96.6434546,70.4788389 97.8491466,70.4788389 C104.726711,70.4788389 110.257217,66.9338053 114.511348,59.843285 C118.198655,53.7455009 120.041855,47.0804389 120.041855,39.7774612 C120.041855,34.246955 118.907299,29.6381848 116.63864,25.809331 Z M107.704467,45.4497416 C106.712184,50.129331 104.939214,53.6036814 102.31578,55.9434761 C100.259625,57.7871292 98.3452882,58.5669097 96.5727714,58.2125876 C94.8709378,57.8578124 93.4527431,56.3689345 92.3893236,53.6036814 C91.5384068,51.4057062 91.1129484,49.207731 91.1129484,47.1515752 C91.1129484,45.3790584 91.2547679,43.606315 91.6095431,41.9754818 C92.2475041,39.0684092 93.4527431,36.2322464 95.3670794,33.537903 C97.7073272,30.0635979 100.188941,28.6454938 102.741239,29.1418166 C104.443072,29.4963653 105.861267,30.9853338 106.924686,33.7505869 C107.775603,35.9486527 108.201062,38.1466733 108.201062,40.2028743 C108.201062,42.0463915 108.059242,43.8189989 107.704467,45.4497416 Z" fill="#7F54B3"> </path> <path d="M191.37161,25.1708262 C186.620885,29.8505062 184.28109,35.8064255 184.28109,43.0386747 C184.28109,50.767292 186.620885,57.0775788 191.300927,61.8283044 C195.980517,66.5790301 202.078301,68.989508 209.664963,68.989508 C211.862938,68.989508 214.344552,68.6351858 217.039122,67.8549522 L217.039122,56.3684814 C214.557508,57.0775788 212.430216,57.432354 210.586563,57.432354 C206.828573,57.432354 203.850817,56.1559788 201.581706,53.6743646 C199.313048,51.1216142 198.178492,47.7184 198.178492,43.3931781 C198.178492,39.3516404 199.313048,36.0191547 201.511023,33.4665855 C203.779681,30.8431519 206.544934,29.5668673 209.948601,29.5668673 C212.146577,29.5668673 214.486371,29.9213706 217.039122,30.6304227 L217.039122,19.1439519 C214.699327,18.5058096 212.075894,18.2221706 209.310187,18.2221706 C202.078301,18.1512609 196.122336,20.4911462 191.37161,25.1708262 Z M240.579341,18.1512609 C234.056099,18.1512609 228.951051,20.3493267 225.263745,24.6744581 C221.576892,28.9996347 219.804375,35.0974188 219.804375,42.8968552 C219.804375,51.3345699 221.647575,57.7866761 225.263745,62.2537628 C228.879915,66.7208496 234.197918,68.989508 241.146619,68.989508 C247.882364,68.989508 253.058095,66.7208496 256.674265,62.2537628 C260.290435,57.7866761 262.134088,51.4763894 262.134088,43.3931781 C262.134088,35.3101027 260.290435,29.0705444 256.603582,24.6744581 C252.845593,20.3493267 247.527589,18.1512609 240.579341,18.1512609 Z M246.180531,55.021423 C244.904155,57.0068956 242.989819,57.9996319 240.579341,57.9996319 C238.31023,57.9996319 236.608396,57.0068956 235.403157,55.021423 C234.197918,53.0359504 233.63064,49.0654584 233.63064,43.0386747 C233.63064,33.7502244 235.970435,29.1414088 240.721161,29.1414088 C245.684389,29.1414088 248.236686,33.8211342 248.236686,43.2514039 C248.166003,49.0654584 247.456906,53.0359504 246.180531,55.021423 Z M297.160778,19.4984552 L294.608028,30.346829 C293.970067,33.1120821 293.332106,35.948245 292.764828,38.8553175 L291.346633,46.3713416 C289.999575,38.8553175 288.155922,29.9213706 285.816127,19.4984552 L269.366428,19.4984552 L263.197508,67.784269 L275.534895,67.784269 L278.867426,34.5301409 L287.305005,67.784269 L296.097359,67.784269 L304.180163,34.6010506 L307.654513,67.784269 L320.559178,67.784269 L314.035936,19.4984552 L297.160778,19.4984552 Z M356.22383,19.4984552 L353.671532,30.346829 C353.033118,33.1120821 352.395157,35.948245 351.827879,38.8553175 L350.409685,46.3713416 C349.062626,38.8553175 347.218973,29.9213706 344.879178,19.4984552 L328.429479,19.4984552 L322.261012,67.784269 L334.597947,67.784269 L337.930478,34.5301409 L346.368056,67.784269 L355.16041,67.784269 L363.172531,34.6010506 L366.646881,67.784269 L379.551547,67.784269 L373.028304,19.4984552 L356.22383,19.4984552 Z M396.355568,48.7111363 L407.913175,48.7111363 L407.913175,38.7134981 L396.355568,38.7134981 L396.355568,29.8504609 L409.685692,29.8504609 L409.685692,19.569365 L383.309536,19.569365 L383.309536,67.8549522 L409.756828,67.8549522 L409.756828,57.5741735 L396.355568,57.5741735 L396.355568,48.7111363 Z M446.484899,41.0533381 C447.83241,38.8553175 448.541055,36.5863873 448.541055,34.2465473 C448.541055,29.7086867 446.768538,26.0925621 443.223504,23.4690832 C439.678017,20.8456496 434.785925,19.4984552 428.688141,19.4984552 L413.514364,19.4984552 L413.514364,67.784269 L426.560849,67.784269 L426.560849,45.8040637 L426.773805,45.8040637 L437.338223,67.784269 L451.093805,67.784269 L440.670754,46.0165664 C443.152368,44.8821919 445.13784,43.2513586 446.484899,41.0533381 Z M426.490166,40.2733763 L426.490166,28.7869055 C429.609741,28.8578152 431.807717,29.3541381 433.155228,30.346829 C434.502286,31.3394747 435.140248,32.8993529 435.140248,35.1682832 C435.140248,38.5007688 432.233175,40.2025119 426.490166,40.2733763 Z M456.19704,25.1708262 C451.448127,29.8505062 449.108332,35.8064255 449.108332,43.0386747 C449.108332,50.767292 451.448127,57.0775788 456.129076,61.8283044 C460.809571,66.5790301 466.903731,68.989508 474.493111,68.989508 C476.690633,68.989508 479.173607,68.6351858 481.865005,67.8549522 L481.865005,56.3684814 C479.386563,57.0775788 477.257005,57.432354 475.412899,57.432354 C471.656722,57.432354 468.679872,56.1559788 466.409855,53.6743646 C464.139837,51.1216142 463.007094,47.7184 463.007094,43.3931781 C463.007094,39.3516404 464.139837,36.0191547 466.337359,33.4665855 C468.607377,30.8431519 471.371271,29.5668673 474.774032,29.5668673 C476.971554,29.5668673 479.314067,29.9213706 481.865005,30.6304227 L481.865005,19.1439519 C479.527023,18.5058096 476.903589,18.2221706 474.139695,18.2221706 C466.976226,18.1512609 460.950032,20.4911462 456.19704,25.1708262 Z M498.529925,57.432354 L498.529925,48.64 L510.083908,48.64 L510.083908,38.6425883 L498.529925,38.6425883 L498.529925,29.7795965 L511.928014,29.7795965 L511.928014,19.4984552 L485.553217,19.4984552 L485.553217,67.784269 L512.000509,67.784269 L512.000509,57.5030372 L498.529925,57.5030372 L498.529925,57.432354 Z" fill="#000000"> </path> </g> </g></svg>
+                    </div>
+                </div>
+
+                <!-- WordPress -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress">
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                    <svg viewBox="0 -224 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="linearGradient-1"> <stop stop-color="#2298BD" offset="0%"> </stop> <stop stop-color="#0ED7B5" offset="100%"> </stop> </linearGradient> </defs> <g> <path d="M52.8666139,-1.0658141e-14 C38.7688502,-1.0658141e-14 29.9577479,7.04888185 26.4333069,21.1466456 C31.7199683,14.0977637 37.88774,11.454433 44.9366218,13.2166535 C48.9584005,14.2220981 51.8329737,17.1397478 55.0147606,20.3695063 C60.1980384,25.6307134 66.1970285,31.7199683 79.2999208,31.7199683 C93.3976845,31.7199683 102.208787,24.6710865 105.733228,10.5733228 C100.446566,17.6222046 94.2787948,20.2655353 87.2299129,18.5033149 C83.2081342,17.4978702 80.333561,14.5802205 77.1517741,11.350462 C71.9684963,6.08925491 65.9695062,-1.0658141e-14 52.8666139,-1.0658141e-14 Z M26.4333069,31.7199683 C12.3355432,31.7199683 3.52444093,38.7688502 0,52.8666139 C5.28666139,45.817732 11.454433,43.1744013 18.5033149,44.9366218 C22.5250936,45.9420665 25.3996667,48.8597162 28.5814537,52.0894747 C33.7647315,57.3506818 39.7637215,63.4399367 52.8666139,63.4399367 C66.9643776,63.4399367 75.7754799,56.3910548 79.2999208,42.2932911 C74.0132594,49.342173 67.8454878,51.9855037 60.796606,50.2232832 C56.7748273,49.2178385 53.9002541,46.3001888 50.7184671,43.0704303 C45.5351894,37.8092232 39.5361993,31.7199683 26.4333069,31.7199683 Z" fill="url(#linearGradient-1)"> </path> <path d="M158.59201,26.7309264 L149.365806,26.7309264 L149.365806,44.5880938 C149.365806,49.350005 152.490811,49.2756002 158.59201,48.9779807 L158.59201,56.1952525 C146.240802,57.6833498 141.330081,54.2607261 141.330081,44.5880938 L141.330081,26.7309264 L134.484834,26.7309264 L134.484834,18.9928205 L141.330081,18.9928205 L141.330081,8.9990725 L149.365806,6.61811685 L149.365806,18.9928205 L158.59201,18.9928205 L158.59201,26.7309264 Z M193.762014,18.9928205 L201.797739,18.9928205 L201.797739,56.1952525 L193.762014,56.1952525 L193.762014,50.8381023 C190.934629,54.7815601 186.544742,57.1625158 180.741163,57.1625158 C170.622101,57.1625158 162.214352,48.6059564 162.214352,37.5940365 C162.214352,26.5077118 170.622101,18.0255573 180.741163,18.0255573 C186.544742,18.0255573 190.934629,20.406513 193.762014,24.2755659 L193.762014,18.9928205 Z M182.006045,49.4988148 C188.702483,49.4988148 193.762014,44.5136889 193.762014,37.5940365 C193.762014,30.6743842 188.702483,25.6892583 182.006045,25.6892583 C175.309608,25.6892583 170.250077,30.6743842 170.250077,37.5940365 C170.250077,44.5136889 175.309608,49.4988148 182.006045,49.4988148 Z M215.190615,13.4124557 C212.36323,13.4124557 210.056679,11.0315001 210.056679,8.27852013 C210.056679,5.4511353 212.36323,3.14458451 215.190615,3.14458451 C218.018,3.14458451 220.32455,5.4511353 220.32455,8.27852013 C220.32455,11.0315001 218.018,13.4124557 215.190615,13.4124557 Z M211.172752,56.1952525 L211.172752,18.9928205 L219.208477,18.9928205 L219.208477,56.1952525 L211.172752,56.1952525 Z M228.509085,56.1952525 L228.509085,1.87970183 L236.544811,1.87970183 L236.544811,56.1952525 L228.509085,56.1952525 Z M288.70262,18.9928205 L297.184775,18.9928205 L285.503211,56.1952525 L277.616296,56.1952525 L269.87819,31.1208134 L262.065679,56.1952525 L254.178764,56.1952525 L242.4972,18.9928205 L250.979354,18.9928205 L258.196626,44.6624986 L266.009137,18.9928205 L273.672838,18.9928205 L281.410944,44.6624986 L288.70262,18.9928205 Z M307.155027,13.4124557 C304.327642,13.4124557 302.021091,11.0315001 302.021091,8.27852013 C302.021091,5.4511353 304.327642,3.14458451 307.155027,3.14458451 C309.982411,3.14458451 312.288962,5.4511353 312.288962,8.27852013 C312.288962,11.0315001 309.982411,13.4124557 307.155027,13.4124557 Z M303.137164,56.1952525 L303.137164,18.9928205 L311.172889,18.9928205 L311.172889,56.1952525 L303.137164,56.1952525 Z M340.041977,18.0255573 C348.375321,18.0255573 354.32771,23.680327 354.32771,33.3529593 L354.32771,56.1952525 L346.291985,56.1952525 L346.291985,34.1714128 C346.291985,28.5166431 343.018171,25.5404486 337.95864,25.5404486 C332.675895,25.5404486 328.509223,28.6654529 328.509223,36.254749 L328.509223,56.1952525 L320.473497,56.1952525 L320.473497,18.9928205 L328.509223,18.9928205 L328.509223,23.7547318 C330.964583,19.8856789 334.982446,18.0255573 340.041977,18.0255573 Z M392.423001,4.11184775 L400.458726,4.11184775 L400.458726,56.1952525 L392.423001,56.1952525 L392.423001,50.8381023 C389.595616,54.7815601 385.205729,57.1625158 379.40215,57.1625158 C369.283088,57.1625158 360.875338,48.6059564 360.875338,37.5940365 C360.875338,26.5077118 369.283088,18.0255573 379.40215,18.0255573 C385.205729,18.0255573 389.595616,20.406513 392.423001,24.2755659 L392.423001,4.11184775 Z M380.667032,49.4988148 C387.36347,49.4988148 392.423001,44.5136889 392.423001,37.5940365 C392.423001,30.6743842 387.36347,25.6892583 380.667032,25.6892583 C373.970595,25.6892583 368.911064,30.6743842 368.911064,37.5940365 C368.911064,44.5136889 373.970595,49.4988148 380.667032,49.4988148 Z M427.393287,57.1625158 C416.158152,57.1625158 407.750403,48.6059564 407.750403,37.5940365 C407.750403,26.5077118 416.158152,18.0255573 427.393287,18.0255573 C434.684964,18.0255573 441.009377,21.8202054 443.985572,27.6237848 L437.065919,31.6416474 C435.429012,28.1446188 431.783174,25.9124729 427.318882,25.9124729 C420.771254,25.9124729 415.786128,30.8975988 415.786128,37.5940365 C415.786128,44.2904743 420.771254,49.2756002 427.318882,49.2756002 C431.783174,49.2756002 435.429012,46.9690494 437.214729,43.5464257 L444.134381,47.4898834 C441.009377,53.3678677 434.684964,57.1625158 427.393287,57.1625158 Z M457.378447,29.2606918 C457.378447,36.0315344 477.393355,31.9392669 477.393355,45.7041667 C477.393355,53.1446531 470.920132,57.1625158 462.884407,57.1625158 C455.443921,57.1625158 450.08677,53.8142969 447.705815,48.4571467 L454.625467,44.439284 C455.815945,47.7875029 458.792139,49.7964342 462.884407,49.7964342 C466.45584,49.7964342 469.20882,48.6059564 469.20882,45.6297618 C469.20882,39.007729 449.193912,42.7279722 449.193912,29.4095015 C449.193912,22.4154443 455.220706,18.0255573 462.810002,18.0255573 C468.911201,18.0255573 473.970732,20.8529421 476.574902,25.7636632 L469.804059,29.5583112 C468.464772,26.6565215 465.860602,25.317234 462.810002,25.317234 C459.908212,25.317234 457.378447,26.5821167 457.378447,29.2606918 Z M491.679089,29.2606918 C491.679089,36.0315344 511.693998,31.9392669 511.693998,45.7041667 C511.693998,53.1446531 505.220775,57.1625158 497.185049,57.1625158 C489.744563,57.1625158 484.387413,53.8142969 482.006457,48.4571467 L488.926109,44.439284 C490.116587,47.7875029 493.092782,49.7964342 497.185049,49.7964342 C500.756483,49.7964342 503.509463,48.6059564 503.509463,45.6297618 C503.509463,39.007729 483.494554,42.7279722 483.494554,29.4095015 C483.494554,22.4154443 489.521348,18.0255573 497.110644,18.0255573 C503.211843,18.0255573 508.271374,20.8529421 510.875544,25.7636632 L504.104702,29.5583112 C502.765414,26.6565215 500.161244,25.317234 497.110644,25.317234 C494.208855,25.317234 491.679089,26.5821167 491.679089,29.2606918 Z" fill="#2D3748"> </path> </g> </g></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-md">
+            <div class="FREQUENTLY">
+                <div class="text-center">
+                    <h5 class="text-danger">
+                        FREQUENTLY ASKED QUESTIONS
+                    </h5>
+                    <h1 class="pb-3">
+                        What Our Clients Want to Know
+                    </h1>
+                    <div class="underline mb-5"></div>
+                </div>
+            </div>
+            
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="true" 
+                            aria-controls="collapseOne" id="accordiony">
+                            How long does it take to develop a website?
+                        </button>
+                    </h1>
+                    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                The time it takes to create your website depends on its complexity and the features you want. A basic website with a few pages and standard functionality can typically be completed within 1 to 3 weeks. If you need a more advanced site — such as an eCommerce platform, or one with custom development — it might take 6 to 12 weeks to ensure everything is properly designed, developed, tested, and optimized.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" 
+                            aria-expanded="true" 
+                            aria-controls="collapseTwo" id="accordiony">
+                            What is the pricing for your web development services?
+                        </button>
+                    </h1>
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                Our pricing is project-based and depends on factors such as the site's complexity, number of pages, and required features. We offer affordable packages to ensure we work with your budget. We've also got discounts running all year long. Please check out our pricing page or contact us for a customized quote!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseThree" 
+                            aria-expanded="true" 
+                            aria-controls="collapseThree" id="accordiony">
+                            What types of websites do you create?
+                        </button>
+                    </h1>
+                    <div id="collapseThree" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                We build all any type of websites, including Corporate, VTU, Real estate, Fintech, Educational, Classified, E-Commerce, Blogs, Investment, Banking, and many more. Whatever your needs are, we create websites that suits your requirements and taste.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFour" 
+                            aria-expanded="true" 
+                            aria-controls="collapseFour" id="accordiony">
+                            What are other services that you offer?
+                        </button>
+                    </h1>
+                    <div id="collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                As the number 1 web design company in Lagos, we also offer other digital services: SEO, Graphics Design, Mobile App Development, SM Management, Content Management, e.t.c
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFive" 
+                            aria-expanded="true" 
+                            aria-controls="collapseFive" id="accordiony">
+                            Do you provide post-launch maintenance?
+                        </button>
+                    </h1>
+                    <div id="collapseFive" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                After your website goes live, we offer a month of technical support and website maintenance at no extra cost. This ensures your site remains secure, updated, and optimized for performance. After the first month, you can also choose a maintenance plan that suits your needs to keep our support going.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion py-2" id="accordion">
+                <div class="accordion-item" id="accordiony-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseSix" 
+                            aria-expanded="true" 
+                            aria-controls="collapseSix" id="accordiony">
+                            What do you need from me to get started?
+                        </button>
+                    </h1>
+                    <div id="collapseSix" class="accordion-collapse collapse " data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p class="py-4">
+                                To get started, we'll need details about your business operations, content (text, images), and any design preferences you have. If you already have a domain and hosting, great! If not, we can assist you purchase them. Once we have these, we'll begin the development process right away!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="look ">
+            <div class="row  p-5">
+                <div class="col-md-12 col-lg-9 text-center text-lg-start">
+                    <h1 class="pt-5 pb-2">
+                        Looking to Create a Website?
+                    </h1>
+                    <h5 class="">
+                        Contact GabriCode Tech Solution - Top Web Design Company in Nigeria. We develop the best web apps!
+                    </h5>
+                </div>
+                <div class="col-md-12 col-lg-3">
+                    <div class="text-center">
+                        <button class="get">
+                            <a class="text-danger text-decoration-none" href="https://wa.me/2347016684261" style="font-size: larger;">
+                                <i class="bi bi-whatsapp"></i>
+                                Get Started Now
+                            </a>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="secondy">
+            <div class="row">
+                <div class="col-md-12 col-lg-3 ps-5 pt-5 text-light">
+                    <img src="image/new_logo_1-removebg-preview.png" alt="" style="width: 150px;">
+                    <p class="py-3">
+                        GabriCode Tech Solution is a web design company in Anambra Lagos & Abuja that offers website development services. We are the best web designers in Nigeria.
+                    </p>
+                    <div class="socia pb-5">
+                        <a href="#">
+                            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="44px" height="44px" viewBox="-15.91 -15.91 63.63 63.63" stroke="#ffffff" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.877,2.000 C22.519,2.000 24.382,2.652 25.426,3.738 C26.724,3.486 27.949,3.025 29.050,2.386 C28.625,3.687 27.718,4.779 26.540,5.469 C27.693,5.332 28.797,5.035 29.820,4.590 C29.054,5.707 28.087,6.690 26.971,7.477 C26.981,7.715 26.987,7.955 26.987,8.195 C26.987,15.562 21.445,24.000 10.939,24.000 C7.715,24.000 4.507,23.133 1.982,21.551 C2.428,21.605 2.883,21.631 3.343,21.631 C6.019,21.631 8.482,20.740 10.439,19.242 C7.937,19.199 5.827,17.586 5.103,15.373 C5.450,15.437 5.810,15.473 6.178,15.473 C6.696,15.473 7.203,15.406 7.681,15.277 C5.068,14.768 3.100,12.514 3.100,9.813 C3.100,9.787 3.100,9.764 3.100,9.740 C3.871,10.158 4.750,10.410 5.687,10.440 C4.154,9.437 3.147,7.734 3.147,5.799 C3.147,4.777 3.428,3.818 3.919,2.998 C6.735,6.367 10.945,8.588 15.693,8.822 C15.594,8.414 15.543,7.984 15.543,7.553 C15.543,4.473 17.721,2.000 20.877,2.000 M29.820,4.590 L29.825,4.590 M20.877,-0.000 C17.033,-0.000 14.060,2.753 13.614,6.552 C10.425,5.905 7.524,4.204 5.440,1.711 C5.061,1.257 4.503,0.998 3.919,0.998 C3.867,0.998 3.815,1.000 3.763,1.004 C3.123,1.055 2.547,1.413 2.216,1.966 C1.525,3.122 1.159,4.447 1.159,5.799 C1.159,6.700 1.321,7.579 1.625,8.400 C1.300,8.762 1.113,9.238 1.113,9.740 L1.113,9.813 C1.113,11.772 1.882,13.589 3.160,14.952 C3.087,15.294 3.103,15.655 3.215,15.998 C3.657,17.348 4.459,18.510 5.499,19.396 C4.800,19.552 4.079,19.631 3.343,19.631 C2.954,19.631 2.577,19.609 2.222,19.565 C2.141,19.556 2.061,19.551 1.981,19.551 C1.148,19.551 0.391,20.078 0.108,20.886 C-0.202,21.770 0.140,22.753 0.932,23.249 C3.764,25.023 7.318,26.000 10.939,26.000 C17.778,26.000 22.025,22.843 24.383,20.195 C27.243,16.984 28.907,12.718 28.972,8.455 C29.899,7.682 30.717,6.790 31.410,5.792 C31.661,5.458 31.810,5.041 31.810,4.590 C31.810,3.909 31.473,3.308 30.958,2.946 C31.181,2.176 30.925,1.342 30.303,0.833 C29.940,0.537 29.496,0.386 29.049,0.386 C28.708,0.386 28.365,0.474 28.056,0.654 C27.391,1.040 26.680,1.344 25.931,1.562 C24.555,0.592 22.688,-0.000 20.877,-0.000 L20.877,-0.000 Z"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#f2f2f2" width="44px" height="44px" viewBox="-79.36 -79.36 414.72 414.72" id="Flat" xmlns="http://www.w3.org/2000/svg" stroke="#f2f2f2" stroke-width="0.00256"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.56"></g><g id="SVGRepo_iconCarrier"> <path d="M224,72a44.04978,44.04978,0,0,1-44-44,12,12,0,0,0-12-12H128a12,12,0,0,0-12,12V156a16,16,0,1,1-22.85107-14.46631,12.0001,12.0001,0,0,0,6.85058-10.83886L100,89.05569a11.99969,11.99969,0,0,0-14.10352-11.814A80.00515,80.00515,0,1,0,180,156l-.00049-29.32812A107.476,107.476,0,0,0,224,136a12,12,0,0,0,12-12V84A12,12,0,0,0,224,72Zm-12,39.15381a83.22823,83.22823,0,0,1-36.99268-14.91211,12,12,0,0,0-19.00781,9.74121L156,156a56,56,0,1,1-80-50.63965l-.00049,18.64795A39.99736,39.99736,0,1,0,140,156V40h17.06006A68.19054,68.19054,0,0,0,212,94.94Z"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#ffffff" width="44px" height="44px" viewBox="-7.36 -7.36 46.72 46.72" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"></path><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"></path></g></svg>
+                        </a>
+                        <a href="#">
+                            <svg width="44px" height="44px" viewBox="-8.4 -8.4 40.80 40.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.49614 7.13176C9.18664 6.9549 8.80639 6.95617 8.49807 7.13509C8.18976 7.31401 8 7.64353 8 8V16C8 16.3565 8.18976 16.686 8.49807 16.8649C8.80639 17.0438 9.18664 17.0451 9.49614 16.8682L16.4961 12.8682C16.8077 12.6902 17 12.3589 17 12C17 11.6411 16.8077 11.3098 16.4961 11.1318L9.49614 7.13176ZM13.9844 12L10 14.2768V9.72318L13.9844 12Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 8.25027 0 6.3754 0.954915 5.06107C1.26331 4.6366 1.6366 4.26331 2.06107 3.95491C3.3754 3 5.25027 3 9 3H15C18.7497 3 20.6246 3 21.9389 3.95491C22.3634 4.26331 22.7367 4.6366 23.0451 5.06107C24 6.3754 24 8.25027 24 12C24 15.7497 24 17.6246 23.0451 18.9389C22.7367 19.3634 22.3634 19.7367 21.9389 20.0451C20.6246 21 18.7497 21 15 21H9C5.25027 21 3.3754 21 2.06107 20.0451C1.6366 19.7367 1.26331 19.3634 0.954915 18.9389C0 17.6246 0 15.7497 0 12ZM9 5H15C16.9194 5 18.1983 5.00275 19.1673 5.10773C20.0989 5.20866 20.504 5.38448 20.7634 5.57295C21.018 5.75799 21.242 5.98196 21.4271 6.23664C21.6155 6.49605 21.7913 6.90113 21.8923 7.83269C21.9973 8.80167 22 10.0806 22 12C22 13.9194 21.9973 15.1983 21.8923 16.1673C21.7913 17.0989 21.6155 17.504 21.4271 17.7634C21.242 18.018 21.018 18.242 20.7634 18.4271C20.504 18.6155 20.0989 18.7913 19.1673 18.8923C18.1983 18.9973 16.9194 19 15 19H9C7.08058 19 5.80167 18.9973 4.83269 18.8923C3.90113 18.7913 3.49605 18.6155 3.23664 18.4271C2.98196 18.242 2.75799 18.018 2.57295 17.7634C2.38448 17.504 2.20866 17.0989 2.10773 16.1673C2.00275 15.1983 2 13.9194 2 12C2 10.0806 2.00275 8.80167 2.10773 7.83269C2.20866 6.90113 2.38448 6.49605 2.57295 6.23664C2.75799 5.98196 2.98196 5.75799 3.23664 5.57295C3.49605 5.38448 3.90113 5.20866 4.83269 5.10773C5.80167 5.00275 7.08058 5 9 5Z" fill="#ffffff"></path> </g></svg>
+                        </a>
+                        <a href="#">
+                            <svg fill="#ffffff" width="44px" height="44px" viewBox="-748.8 -748.8 3417.60 3417.60" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z" fill-rule="evenodd"></path> </g></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3  text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4>Quick Links</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="about.html" class="py-4">About Us</a>
+                        </p>
+                        <p>
+                            <a href="index.html#portfolio" class="py-2">Portfolio</a>
+                        </p>
+                         
+                        <p>
+                            <a href="book.html" class="py-2">Consultation</a><br>
+                        </p>
+                        <p>
+                            <a href="contact.html" class="pt-2">Contact Us</a><br>
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3  text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4> Our Services</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="web.html" class="py-4">Web Development</a>
+                        </p>
+                        <p>
+                            <a href="shoptify.html" class="py-2">Shoptify Design</a>
+                        </p>
+                         <p>
+                            <a href="seo.html" class="py-2">SEO</a><br>
+                         </p>
+                        <p>
+                            <a href="sm.html" class="py-2">SM Management</a><br>
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 px-3 text-light">
+                    <div class="text-start pt-5">
+                        <h4 class="text-start position-relative">Contact Info</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                    </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <a href="tel:07016684261" target="_blank">
+                                <i class="bi bi-telephone text-danger"></i>
+                                +234 7016684261
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:oliigabriel7@gmail.com" target="_blank">
+                                <i class="bi bi-envelope text-danger"></i>
+                                oliigabriel7@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-3 px-3 text-light">
+                    <div class="text-start position-relative pt-5">
+                        <h4>Our Offices</h4>
+                        <div class="underline mb-3 w md-w-30 md-text-start position-absolute ms-2"></div>
+                        </div>
+                    <div class="quick mt-5">
+                        <p>
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="-27.52 -27.52 119.04 119.04" enable-background="new 0 0 64 64" xml:space="preserve" fill="#d90d0d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#e1053c" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                            ifite Awka, Anambra State
+                        </p>
+                        <p>
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="-27.52 -27.52 119.04 119.04" enable-background="new 0 0 64 64" xml:space="preserve" fill="#d90d0d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#e1053c" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                            Ajakpani Umunya, Anambra State
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="underline bg-light w-100"></div>
+            <div class="text-light py-5 d-block d-lg-none text-center ">
+                <p class="px-5">
+                    &copy;2025 <a class="text-danger" href="#"> GabriCode Tech Solution.</a> All Rights Researved.
+                </p>
+                <p>
+                    Prevacy Policy / Terms of Service
+                </p>
+            </div>
+            
+            
+
+            <div class="row g-3 py-5 d-none d-lg-flex">
+                <div class="col-12 col-lg-9 text-light">
+                    <p class="px-5">
+                        &copy;2025 <a class="text-danger text-decoration-none" href="#"> GabriCode Tech Solution.</a> All Rights Researved.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-3 text-light">
+                    <p>
+                        Prevacy Policy / Terms of Service
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+    <div class="container">
+        <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-3a47bbbc-6405-472c-8129-a74d09415b1e" data-elfsight-app-lazy></div>
+    </div>
+
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</body>
+</html>
