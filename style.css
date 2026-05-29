@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 nav{
     border-bottom-color: rgb(182, 40, 40);
     border-bottom-style: solid;
