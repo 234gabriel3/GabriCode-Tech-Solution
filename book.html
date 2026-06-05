@@ -182,7 +182,7 @@
 
             <div class="form-wrapper border-top border-danger border-5">
 
-                <p class="text-center text-danger fw-bold">BOOK YOUR SESSION</p>
+                <p class="text-center text-danger fw-bold">BOOK YOUR SESSIONS</p>
 
                 <h2 class="section-title">Schedule Your Consultation</h2>
                 <div class="underline"></div>
@@ -271,11 +271,11 @@
 
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Choose Session Duration *</label>
-                            <select class="form-select form-select-lg" required>
-                                <option id="options">Select duration</option>
-                                <option id="options">20 Minutes</option>
-                                <option id="optionss">40 Minutes</option>
-                                <option id="optionesss">60 Minutes</option>
+                            <select class="form-select form-select-lg" required id="duration">
+                                <option value="">Select duration</option>
+                                <option value="30,000">20 Minutes</option>
+                                <option value="50,000">40 Minutes</option>
+                                <option value="70,000">60 Minutes</option>
                             </select>
                         </div>
 
@@ -494,16 +494,17 @@
         <div class="elfsight-app-3a47bbbc-6405-472c-8129-a74d09415b1e" data-elfsight-app-lazy></div>
     </div>
     <script>
-        const formed = document.getElementById("formed");
-        const options = document.getElementById("options");
-        const optionss = document.getElementById("optionss");
+        const duration = document.getElementById("duration");
+        const cost = document.getElementById("formed");
 
+        duration.addEventListener("change", function () {
 
-        options.addEventListener('click', event => {
-            formed.textContent = 'Hello, JavaScript!';
-        });
-        optionss.addEventListener('click', event => {
-            formed.textContent = 'Hello, JavaScript!';
+            if (this.value === "") {
+                cost.textContent = "Select duration to see cost";
+            } else {
+                cost.textContent = this.value;
+            }
+
         });
     </script>
 </body>
