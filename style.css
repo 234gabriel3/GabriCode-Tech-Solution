@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+
 }
 nav{
     border-bottom-color: rgb(182, 40, 40);
@@ -33,6 +34,10 @@ nav{
 }   
 .navbar-nav .dropdown-item:hover{
     color: red;
+}
+.navbar .navbar-brand img{
+    width: 10px;
+    height: auto;
 }
 .navbar-nav .dropdown-menu{
     background-color: black;
