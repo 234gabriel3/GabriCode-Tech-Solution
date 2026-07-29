@@ -1,5 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    
 body{
     overflow-x: hidden;
+
 
 }
 nav{
@@ -21,9 +26,9 @@ nav{
 }
 .nav-list a{
     color: rgb(255, 255, 255);
-    font-size: 14px;
+    /*font-size: 14px;*/
     padding: 20px;
-    font-size: large;
+    /*font-size: large;*/
     justify-items: right;
     align-content: start;
     
@@ -36,7 +41,7 @@ nav{
     color: red;
 }
 .navbar .navbar-brand img{
-    width: 10px;
+    width: 5px;
     height: auto;
 }
 .navbar-nav .dropdown-menu{
