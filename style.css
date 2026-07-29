@@ -243,7 +243,7 @@ a .navlink:hover{
     background-color: red;
 }
 .tech-card img {
-    max-width: 50px;
+    max-width: 100%;
     height: auto;
 }
 .tech-card svg {
